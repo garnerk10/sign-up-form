@@ -1,0 +1,27 @@
+body {
+    display: flex;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+}
+
+.img_container {
+    display: flex;
+}
+
+.title {
+    z-index: 1;
+    position: absolute;
+}
+
+.title h1 {
+    width: 100%;
+}
+
+.img_container img {
+    width: 100%;
+    z-index: 0;
+}
+

@@ -1,27 +1,47 @@
+html {
+    height: 100%;
+}
+
 body {
     display: flex;
     margin: 0;
+    height: 100%;
 }
 
 .header {
     width: 100%;
-}
-
-.img_container {
+    background-image: url("water-background.jpg");
+    height: 100%;
+    background-size: cover;
     display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .title {
-    z-index: 1;
-    position: absolute;
+    width: 100%;
+    position: relative;
+    bottom: 10rem;
+    background-color: rgb(211 242 234 / 40%);
+    height: 5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .title h1 {
-    width: 100%;
+    text-align: center;
+    font-size: 4rem;
+    color: rgb(254 248 248);
 }
 
-.img_container img {
-    width: 100%;
-    z-index: 0;
+.page {
+    background-color:  rgb(254 248 248);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+span {
+    color: rgb(62 167 230);
+}

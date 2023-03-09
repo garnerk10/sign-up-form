@@ -16,6 +16,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
 }
 
 .title {
@@ -29,6 +30,16 @@ body {
     align-items: center;
 }
 
+.logo {
+    width: 100px;
+    height: 300px;
+    object-fit: contain;
+}
+
+.logo img {
+    min-width: 100%;
+}
+
 .title h1 {
     text-align: center;
     font-size: 4rem;
@@ -36,7 +47,7 @@ body {
 }
 
 .page {
-    background-color:  rgb(254 248 248);
+    background-color:  rgb(255 248 246);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -52,8 +63,8 @@ span {
 }
 
 form {
-    border:1px solid rgb(254 248 248);
     padding: 2rem;
+    box-shadow: inset 3px 3px 3px rgb(255, 255, 255), inset -3px -3px 3px rgb(201 201 201 / 40%);
 }
 
 .login {
@@ -80,12 +91,31 @@ form {
     margin-bottom: 1.5rem;
 }
 
+input {
+    border-radius: 10px;
+    padding: 5px;
+    border: white;
+}
+
+input:focus {
+    box-shadow: 2px 2px 4px rgb(19 153 222);
+    outline: none;
+}
+
 legend {
     font-size: 2rem;
     margin-bottom: 2rem;
 }
 
+.button_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 button {
     background-color: rgb(211 242 234);
     font-size: 1.5rem;
+    width: 33%;
+    border-radius: 10px;
 }

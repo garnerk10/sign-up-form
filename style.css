@@ -1,3 +1,8 @@
+@font-face {
+    font-family: 'Beach Sunshine';
+    src: url('font/Beach\ Sunshine\ Clean.otf'), url('font/Beach\ Sunshine\ Texture.ttf');
+}
+
 html {
     height: 100%;
 }
@@ -13,17 +18,14 @@ body {
     background-image: url("water-background.jpg");
     height: 100%;
     background-size: cover;
-    display: flex;
+    display: flexbox;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
 }
 
 .title {
     width: 100%;
-    position: relative;
-    bottom: 10rem;
-    background-color: rgb(211 242 234 / 40%);
+    background-color: rgb(211 242 234 / 60%);
     height: 5rem;
     display: flex;
     justify-content: center;
@@ -31,19 +33,25 @@ body {
 }
 
 .logo {
-    width: 100px;
-    height: 300px;
+    width: 150px;
+    height: 200px;
     object-fit: contain;
+    background-color: rgb(211 242 234 / 60%);
+    margin: 7rem auto 2rem;
+    border-radius: 50%;
 }
 
 .logo img {
-    min-width: 100%;
+    object-fit: fill;
+    width: 150px;
+    height: 200px;
 }
 
 .title h1 {
     text-align: center;
     font-size: 4rem;
     color: rgb(254 248 248);
+    font-family: 'Beach Sunshine', sans-serif;
 }
 
 .page {
@@ -56,6 +64,7 @@ body {
 
 .intro {
     padding: 2rem;
+    font-family: 'Shantell Sans', sans-serif;
 }
 
 span {
@@ -65,6 +74,7 @@ span {
 form {
     padding: 2rem;
     box-shadow: inset 3px 3px 3px rgb(255, 255, 255), inset -3px -3px 3px rgb(201 201 201 / 40%);
+    font-family: 'Shantell Sans', sans-serif;
 }
 
 .login {
@@ -94,12 +104,18 @@ form {
 input {
     border-radius: 10px;
     padding: 5px;
-    border: white;
+    border: 2px solid rgb(192 159 15);
 }
 
 input:focus {
     box-shadow: 2px 2px 4px rgb(19 153 222);
     outline: none;
+    border: 2px solid rgb(19 153 222);
+}
+
+input:invalid:focus {
+    box-shadow: 2px 2px 4px red;
+    border: 2px solid red;
 }
 
 legend {
@@ -118,4 +134,23 @@ button {
     font-size: 1.5rem;
     width: 33%;
     border-radius: 10px;
+    border: 2px solid rgb(192 159 15);
+    color: rgb(192 159 15);
+    font-family: 'Beach Sunshine', sans-serif;
+    letter-spacing: 2px;
 }
+
+button:hover {
+    background-color: rgb(19 153 222);
+    cursor: pointer;
+}
+
+.login {
+    font-family: 'Shantell Sans', sans-serif;
+}
+
+.login span:hover {
+    cursor: pointer;
+    color:rgb(192 159 15);
+}
+

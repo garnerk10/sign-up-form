@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Shantell+Sans:wght@300&display=swap" rel="stylesheet">
     <title>Sign-up Form</title>
+    <script src="pass_val.js" async></script>
 </head>
 <body>
 
@@ -28,7 +29,7 @@
             <h2>You <em>know</em> you want to.</h2>
         </div>
 
-        <form action="post">
+        <form>
             <legend>Let's do this!</legend>
             <div class="input_layout">
             
@@ -52,22 +53,22 @@
             <div class="row2">
             <div class="input_container">
             <label for="phone_number">Phone Number</label>
-            <input type="tel" id="phone_number" name="phone_number" placeholder="   -   -    " required minlength="12">
+            <input type="tel" id="phone_number" name="phone_number" placeholder="   -   -    " required pattern="[0-9]{10}">
             </div>
 
             <div class="input_container">
             <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
+            <input type="password" id="password" name="password" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
             </div>
 
             <div class="input_container">
             <label for="confirm_pw">Confirm Password</label>
-            <input type="password" id="confirm_pw" name="confirm_pw" required>
+            <input type="password" id="passwordC" name="confirm_pw" required pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}">
             </div>
             </div>
 
             <div class="button_container">
-            <button type="submit">Create Account</button>
+            <button type="submit" id="submit" onclick="validation">Create Account</button>
             </div>
             </div>
         </form>
